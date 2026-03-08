@@ -17,3 +17,8 @@ htmlcov/
 *.log
 *.sqlite3
 *.db
+__pycache__/
+*.pyc
+out/foas.json
+out/foas.csv
+out/eval_metrics.json
