@@ -1,0 +1,37 @@
+{
+  "foa_id": "NSF 26-101",
+  "title": "NSF 26-101: AI and Climate Resilience for Undergraduate Research",
+  "agency": "NSF",
+  "open_date": "2026-01-15",
+  "close_date": "2026-04-30",
+  "eligibility": "Eligible applicants include accredited U.S. institutions of higher education, minority-serving institutions, and organizations supporting underserved communities and undergraduate students",
+  "program_description": "This program supports interdisciplinary, community-engaged projects that apply machine learning, data science, and predictive modeling to climate adaptation and public health resilience",
+  "award_range": "$150,000 to $750,000",
+  "source_url": "file://data/sample_foa.html",
+  "source_type": "nsf",
+  "tags": {
+    "research_domains": [
+      "artificial_intelligence",
+      "health_biomedical",
+      "environment_climate",
+      "education_workforce",
+      "data_computing"
+    ],
+    "methods_approaches": [
+      "modeling_simulation",
+      "community_engaged"
+    ],
+    "populations": [
+      "undergraduate_students",
+      "underserved_groups",
+      "general_population"
+    ],
+    "sponsor_themes": [
+      "interdisciplinary_collaboration"
+    ]
+  },
+  "tagging_metadata": {
+    "strategy": "rule_only",
+    "rule_status": "enabled"
+  }
+}

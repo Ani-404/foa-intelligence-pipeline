@@ -1,0 +1,4 @@
+# URLs or local file paths for batch updates
+file://data/sample_foa.html
+https://new.nsf.gov/funding/opportunities/research-experiences-undergraduates-reu
+https://www.grants.gov/search-results-detail/353275

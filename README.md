@@ -30,6 +30,20 @@ python main.py --url "https://example-foa-url" --out_dir ./out
 python main.py --url "file://data/sample_foa.html" --out_dir ./out --source nsf
 ```
 
+## Real FOA examples (live websites)
+Use these to test real-source behavior when the site is reachable from your network.
+
+```bash
+python main.py --url "https://new.nsf.gov/funding/opportunities/research-experiences-undergraduates-reu" --out_dir ./out --source nsf
+python main.py --url "https://www.grants.gov/search-results-detail/353275" --out_dir ./out --source grantsgov
+```
+
+Expected top-quality behavior on reachable pages:
+- `agency` correctly resolves to `NSF` or `Grants.gov`
+- `title` and `program_description` are non-empty
+- `foa_id` is extracted or generated deterministically
+- Failures do not crash; fallback record is still exported
+
 ## Batch update workflow
 ```bash
 python main.py --input data/foa_sources.txt --out_dir ./out --source auto
@@ -39,6 +53,16 @@ python main.py --input data/foa_sources.txt --out_dir ./out --source auto
 ```bash
 python evaluate.py --eval_file data/eval_set.jsonl --out out/eval_metrics.json
 ```
+
+## Known Limitations
+- Some FOA pages block automated requests or load core content dynamically, which can reduce extraction quality.
+- Date and section extraction still use heuristics; formatting differences across agencies can cause misses.
+- Embedding and LLM tagging are optional and dependency/API dependent.
+
+## Future Work
+- Add source-specific parsers for stable NSF and Grants.gov templates (and NIH as the next source).
+- Add retry/session handling plus optional browser rendering for anti-bot or JS-heavy pages.
+- Expand evaluation with more real FOAs and per-source error analysis.
 
 ## Notes
 - Pipeline always works in rule-based mode.
